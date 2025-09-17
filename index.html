@@ -2655,90 +2655,483 @@ window.addEventListener('scroll', () => {
     "retina_detect": true,
   });
     </script>
-<!-- What We Do Section – Modern Version -->
-<section id="overview1" class="overview1-section" style="position: relative; overflow: hidden; margin-bottom: 200px !important; margin-top:0px; background: linear-gradient(135deg, #ffffff, #ffffff); color: #000000;">
+   <style>
+   
+   .tech-innovation-section {
+    position: relative;
+    margin-top: -130px;   
+    margin-bottom: -450px; 
+    padding: 40px 0;     
+    background: #fff;
+    color: #000;
+    border-radius: 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
 
 
-  <!-- Animated background circles -->
-  <div class="bg-circle" style="position: absolute; width: 300px; height: 300px; background: rgba(59, 130, 246, 0.2); border-radius: 50%; top: 100px; left: -100px; animation: float1 15s infinite ease-in-out;"></div>
-  <div class="bg-circle" style="position: absolute; width: 200px; height: 200px; background: rgba(99, 102, 241, 0.2); border-radius: 50%; bottom: 50px; right: -50px; animation: float2 20s infinite ease-in-out;"></div>
+.section-title {
+    margin-bottom: 40px;    
+}
 
-  <div class="container text-center" style="position: relative; z-index: 2;">
-    <h1 style="font-size: 3rem; font-weight: bold; margin-bottom: 100px;">WHAT WE DO</h1>
-    <h2 style="font-size: 1.5rem; font-weight: 500; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.9;">
-      Driving innovation, digital platforms, and community projects to empower the Mafikeng ecosystem.
-    </h2>
+.section-subtitle {
+    margin-bottom: 40px;   
+}
 
-    <div class="opportunity-cards" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
 
-      <!-- Card 1 -->
-      <div class="card" style="background: #023020; backdrop-filter: blur(10px); border-radius: 20px; width: 280px; height: 360px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.4s, box-shadow 0.4s;">
-        <div style="text-align:center;">
-          <h3 style="color: #3b82f6; font-size: 1.3rem; margin-bottom: 15px;">INNOVATION PROGRAMS</h3>
-          <p style="font-size: 1rem; margin-bottom: 15px;">GCIP & Startup Initiatives</p>
-          <p style="font-size: 0.9rem; opacity: 0.9;">Join programs and submit proposals that foster entrepreneurship and innovation in the digital ecosystem.</p>
-        </div>
-        <a href="programs.html" style="align-self:center; margin-top: 10px; color: #ffd700; font-weight:bold; text-decoration:none;">Apply →</a>
-      </div>
 
-      <!-- Card 2 -->
-      <div class="card" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 20px; width: 280px; height: 360px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.4s, box-shadow 0.4s;">
-        <div style="text-align:center;">
-          <h3 style="color: #3b82f6; font-size: 1.3rem; margin-bottom: 15px;">DIGITAL PLATFORMS</h3>
-          <p style="font-size: 1rem; margin-bottom: 15px;">MDIHub Marketplace</p>
-          <p style="font-size: 0.9rem; opacity: 0.9;">Connecting innovators with resources and opportunities through our online digital marketplace platform.</p>
-        </div>
-        <a href="#" style="align-self:center; margin-top: 10px; color: #ffd700; font-weight:bold; text-decoration:none;">Visit Platform →</a>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 20px; width: 280px; height: 360px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.4s, box-shadow 0.4s;">
-        <div style="text-align:center;">
-          <h3 style="color: #3b82f6; font-size: 1.3rem; margin-bottom: 15px;">HACKATHONS</h3>
-          <p style="font-size: 1rem; margin-bottom: 15px;">NASA Space Apps Challenge</p>
-          <p style="font-size: 0.9rem; opacity: 0.9;">Participate in global hackathons hosted locally in Mafikeng. Showcase your solutions and win recognition.</p>
-        </div>
-        <a href="https://www.spaceappschallenge.org/2025/local-events/mafikeng/" style="align-self:center; margin-top: 10px; color: #ffd700; font-weight:bold; text-decoration:none;">Register →</a>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="card" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 20px; width: 280px; height: 360px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.4s, box-shadow 0.4s;">
-        <div style="text-align:center;">
-          <h3 style="color: #3b82f6; font-size: 1.3rem; margin-bottom: 15px;">COMMUNITY PROJECTS</h3>
-          <p style="font-size: 1rem; margin-bottom: 15px;">Lotlhakane Skills Portal</p>
-          <p style="font-size: 0.9rem; opacity: 0.9;">Platforms for skills assessment and community development, providing free training to early participants.</p>
-        </div>
-        <a href="https://borrapulana.netlify.app/" style="align-self:center; margin-top: 10px; color: #ffd700; font-weight:bold; text-decoration:none;">Try Now →</a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- CSS Animations -->
-  <style>
-    @keyframes float1 {
-      0%, 100% { transform: translateY(0) translateX(0); }
-      50% { transform: translateY(30px) translateX(20px); }
-    }
-
-    @keyframes float2 {
-      0%, 100% { transform: translateY(0) translateX(0); }
-      50% { transform: translateY(-30px) translateX(-20px); }
-    }
-
-    .card:hover {
-      transform: translateY(-15px) scale(1.05);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-    }
-
-    @media(max-width: 992px){
-      .opportunity-cards{
-        flex-direction: column;
-        align-items: center;
+      .tech-background-elements {
+          position: absolute;
+          width: 100%;
+          height: 80%;
+          top: 0;
+          left: 0;
+          z-index: 1;
       }
-    }
+      
+      
+      
+      .bg-circle {
+          position: absolute;
+          border-radius: 50%;
+          animation: float1 15s infinite ease-in-out;
+      }
+    
+      .bg-circle:nth-child(2) {
+          width: 300px;
+          height: 300px;
+          background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 215, 0, 0) 70%);
+          top: 100px;
+          left: 0px;
+          transform: translateX(-50%);
+      }
+      
+      .bg-circle:nth-child(3) {
+          width: 200px;
+          transform: translateX(-50%);
+          height: 200px;
+          background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0) 70%);
+          bottom: 50px;
+          right: 0px;
+          animation: float2 20s infinite ease-in-out;
+      }
+      
+      .floating-dots {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+      }
+      
+      .dot {
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          background: #000000;
+          border-radius: 50%;
+          opacity: 0.5;
+          animation: float-dot 8s infinite ease-in-out;
+      }
+      
+      .hexagon {
+          position: absolute;
+          width: 60px;
+          height: 34px;
+          background: rgba(255, 215, 0, 0.1);
+          margin: 17px 0;
+          animation: rotate 20s infinite linear;
+      }
+      
+      .hexagon:before, .hexagon:after {
+          content: "";
+          position: absolute;
+          width: 0;
+          border-left: 30px solid transparent;
+          border-right: 30px solid transparent;
+      }
+      
+      .hexagon:before {
+          bottom: 100%;
+          border-bottom: 17px solid rgba(255, 215, 0, 0.1);
+      }
+      
+      .hexagon:after {
+          top: 100%;
+          border-top: 17px solid rgba(255, 215, 0, 0.1);
+      }
+      
+      .hexagon-1 {
+          top: 20%;
+          left: 10%;
+          animation-delay: 0s;
+      }
+      
+      .hexagon-2 {
+          top: 70%;
+          left: 85%;
+          animation-delay: 5s;
+      }
+      
+      .hexagon-3 {
+          top: 40%;
+          left: 75%;
+          animation-delay: 10s;
+      }
+
+      @keyframes float1 {
+          0%, 100% { transform: translateY(0) translateX(0); }
+          50% { transform: translateY(30px) translateX(20px); }
+      }
+
+      @keyframes float2 {
+          0%, 100% { transform: translateY(0) translateX(0); }
+          50% { transform: translateY(-30px) translateX(-20px); }
+      }
+
+      @keyframes float-dot {
+          0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+          50% { transform: translateY(-20px) translateX(15px); opacity: 0.7; }
+      }
+      
+      @keyframes rotate {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
+
+      .tech-innovation-section .container {
+          position: relative;
+          z-index: 2;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+          text-align: center;
+      }
+
+      .section-title {
+          font-size: 3.5rem;
+          font-weight: 800;
+          margin-bottom: 80px;
+          background: #000;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          position: relative;
+          display: inline-block;
+          text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .section-title:after {
+          content: '';
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80px;
+          height: 4px;
+          background: linear-gradient(90deg, #3b82f6, #ffd700);
+          border-radius: 2px;
+      }
+
+      .section-subtitle {
+          font-size: 1.5rem;
+          font-weight: 400;
+          margin-bottom: 80px;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+          opacity: 0.9;
+          color: #000000;
+          line-height: 1.6;
+      }
+
+      .opportunity-cards {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: repeat(4, auto);
+          gap: 30px;
+          margin: 0 auto;
+          max-width: 1200px;
+      }
+
+      .tech-card {
+          border-radius: 20px;
+          padding: 30px;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          background: rgb(0, 0, 0);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 215, 0, 0.2);
+          position: relative;
+          overflow: hidden;
+      }
+      
+      .tech-card:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 5px;
+          background: var(--card-accent);
+      }
+      
+      .tech-card:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, transparent 100%);
+          opacity: 0;
+          transition: opacity 0.4s ease;
+      }
+      
+      .tech-card:hover:after {
+          opacity: 1;
+      }
+
+      .tech-card:hover {
+          transform: translateY(-15px) scale(1.02);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 215, 0, 0.2);
+      }
+
+      .card-icon {
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: center;
+          color: var(--card-accent);
+          font-size: 2.5rem;
+      }
+
+      .card-content {
+          text-align: center;
+          flex-grow: 1;
+      }
+
+      .tech-card h3 {
+          color: var(--card-accent);
+          font-size: 1.5rem;
+          margin-bottom: 15px;
+          font-weight: 700;
+      }
+
+      .card-subtitle {
+          font-size: 1.1rem;
+          margin-bottom: 15px;
+          font-weight: 600;
+          color: #ffd700;
+      }
+
+      .card-description {
+          font-size: 1rem;
+          opacity: 0.9;
+          line-height: 1.6;
+          margin-bottom: 20px;
+          color: #ffffff;
+      }
+
+      .card-cta {
+          align-self: center;
+          margin-top: 10px;
+          color: var(--card-accent);
+          font-weight: 700;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+          transition: all 0.3s ease;
+          padding: 10px 20px;
+          border: 1px solid var(--card-accent);
+          border-radius: 30px;
+          background: rgba(255, 255, 255, 0.05);
+      }
+
+      .card-cta:hover {
+          transform: translateX(5px);
+          background: rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+      }
+
+      /* Card positioning */
+      .card-1 {
+        right: 250px;
+          grid-column: 2 / span 4;
+          grid-row: 1 / span 2;
+          --card-accent: #3b82f6;
+          background: linear-gradient(135deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+      }
+
+      .card-2 {
+        left: 50px;
+        top: -250px;
+          grid-column: 7 / span 4;
+          grid-row: 2 / span 2;
+          --card-accent: #10b981;
+          background: linear-gradient(135deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+      }
+
+      .card-3 {
+        bottom: 320px;
+        left: -50px;
+          grid-column: 4 / span 4;
+          grid-row: 3 / span 2;
+          --card-accent: #f59e0b;
+          background: linear-gradient(135deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+      }
+
+      .card-4 {
+        bottom: 500px;
+        right: -330px;
+          grid-column: 8 / span 4;
+          grid-row: 4 / span 2;
+          --card-accent: #ef4444;
+          background: linear-gradient(135deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 1200px) {
+          .opportunity-cards {
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: repeat(2, auto);
+              max-width: 700px;
+          }
+          
+          .card-1, .card-2, .card-3, .card-4 {
+              grid-column: auto;
+              grid-row: auto;
+          }
+      }
+
+      @media (max-width: 768px) {
+          .opportunity-cards {
+              grid-template-columns: 1fr;
+              max-width: 400px;
+          }
+          
+          .section-title {
+              font-size: 2.5rem;
+          }
+          
+          .section-subtitle {
+              font-size: 1.2rem;
+          }
+          
+          .tech-card {
+              padding: 20px;
+          }
+      }
+      
+      .gold-accent {
+          color: #ffd700;
+      }
+      
+      .pulse {
+          display: block;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background: #ffd700;
+          box-shadow: 0 0 0 rgba(255, 215, 0, 0.4);
+          animation: pulse 2s infinite;
+          margin: 0 auto 20px;
+      }
+      
+      @keyframes pulse {
+          0% {
+              box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+          }
+          70% {
+              box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+          }
+          100% {
+              box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+          }
+      }
   </style>
-</section>
+
+  <!-- What We Do Section – Modern Tech Version -->
+  <section class="tech-innovation-section">
+      <!-- Animated background elements -->
+      <div class="tech-background-elements">
+          
+          
+          <div class="floating-dots">
+              <div class="dot" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+              <div class="dot" style="top: 65%; left: 85%; animation-delay: 1s;"></div>
+              <div class="dot" style="top: 40%; left: 75%; animation-delay: 2s;"></div>
+              <div class="dot" style="top: 75%; left: 25%; animation-delay: 1.5s;"></div>
+          </div>
+          
+          <div class="hexagon hexagon-1"></div>
+          <div class="hexagon hexagon-2"></div>
+          <div class="hexagon hexagon-3"></div>
+      </div>
+
+      <div class="container text-center">
+          <span class="pulse"></span>
+          <h1 class="section-title">WHAT WE DO</h1>
+          <h2 class="section-subtitle">
+              Driving <span class="gold-accent">innovation</span>, digital platforms, and community projects to empower the Mafikeng ecosystem.
+          </h2>
+
+          <div class="opportunity-cards">
+              <!-- Card 1 -->
+              <div class="tech-card card-1">
+                  <div class="card-icon">
+                      <i class="fas fa-lightbulb"></i>
+                  </div>
+                  <div class="card-content">
+                      <h3>INNOVATION PROGRAMS</h3>
+                      <p class="card-subtitle">GCIP & Startup Initiatives</p>
+                      <p class="card-description">Join programs and submit proposals that foster entrepreneurship and innovation in the digital ecosystem.</p>
+                  </div>
+                  <a href="programs.html" class="card-cta">Apply →</a>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="tech-card card-2">
+                  <div class="card-icon">
+                      <i class="fas fa-laptop-code"></i>
+                  </div>
+                  <div class="card-content">
+                      <h3>DIGITAL PLATFORMS</h3>
+                      <p class="card-subtitle">MDIHub Marketplace</p>
+                      <p class="card-description">Connecting innovators with resources and opportunities through our online digital marketplace platform.</p>
+                  </div>
+                  <a href="#" class="card-cta">Visit Platform →</a>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="tech-card card-3">
+                  <div class="card-icon">
+                      <i class="fas fa-code"></i>
+                  </div>
+                  <div class="card-content">
+                      <h3>HACKATHONS</h3>
+                      <p class="card-subtitle">NASA Space Apps Challenge</p>
+                      <p class="card-description">Participate in global hackathons hosted locally in Mafikeng. Showcase your solutions and win recognition.</p>
+                  </div>
+                  <a href="https://www.spaceappschallenge.org/2025/local-events/mafikeng/" class="card-cta">Register →</a>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="tech-card card-4">
+                  <div class="card-icon">
+                      <i class="fas fa-users"></i>
+                  </div>
+                  <div class="card-content">
+                      <h3>COMMUNITY PROJECTS</h3>
+                      <p class="card-subtitle">Lotlhakane Skills Portal</p>
+                      <p class="card-description">Platforms for skills assessment and community development, providing free training to early participants.</p>
+                  </div>
+                  <a href="https://borrapulana.netlify.app/" class="card-cta">Try Now →</a>
+              </div>
+          </div>
+      </div>
+  </section>
 
 </div>
 <!-- Enhanced Gallery Calendar Section -->
