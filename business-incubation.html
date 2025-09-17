@@ -1,0 +1,2669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MDiHub Business Incubation</title>
+  <meta name="description" content="Follow our entrepreneurial journey from idea to impact through business incubation. Learn how MDiHub transforms dreams into scalable businesses through our proven 3-stage process.">
+  <meta name="author" content="MDiHub">
+  
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="What is Business Incubation? | Thabo's Journey with MDiHub">
+  <meta property="og:description" content="Follow our entrepreneurial journey from idea to impact through business incubation.">
+  <meta property="og:type" content="website">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Google Fonts (Futuristic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  
+  <style>
+    /* ===== GLOBAL STYLES ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary: #D4AF37;
+      --primary-dark: #b89c02;
+      --secondary: #07173F;
+      --accent: #6f4403;
+      --text: #333333;
+      --light: #fff;
+      --dark: #1e293b;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --error: #ef4444;
+      --radius: 8px;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --transition: all 0.3s ease;
+    }
+    
+    body {
+      font-family: 'Fira Sans', sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
+      background-color: #fff;
+      line-height: 1.6;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: var(--secondary);
+    }
+    
+    .section-description {
+      font-size: 1.125rem;
+      color: #64748b;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    
+    /* ===== HEADER STYLES ===== */
+    .header-main {
+      display: flex;
+      position: fixed;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 30px;
+      background: #fff;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+    }
+    
+    .logo img {
+      height: 60px;
+      transform: scale(1.15);
+      transform-origin: left center;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+      font-weight: bold;
+      margin: 0;
+    }
+    
+    .nav-menu a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: rgb(0, 0, 0);
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-menu a:hover {
+      color: #00ffe0;
+    }
+    
+    .nav-menu a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0%;
+      height: 2px;
+      background: #00ffe0;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+    
+    .dropdown {
+      position: relative;
+    }
+    
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background: rgba(30, 30, 30, 0.9);
+      backdrop-filter: blur(10px);
+      list-style: none;
+      padding: 10px 0;
+      border-radius: 8px;
+      top: 28px;
+      min-width: 150px;
+    }
+    
+    .dropdown-menu li {
+      padding: 6px 16px;
+    }
+    
+    .dropdown-menu a {
+      color: #fff;
+      font-size: 14px;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+    
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: white;
+      border-radius: 2px;
+    }
+    
+    /* Social Icons */
+    .social-card {
+      width: fit-content;
+      height: fit-content;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .socialContainer {
+      width: 35px;
+      height: 35px;
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition-duration: .3s;
+      border-radius: 20px;
+    }
+    
+    .containerOne:hover {
+      background-color: #d62976;
+    }
+    
+    .containerTwo:hover {
+      background-color: #00acee;
+    }
+    
+    .containerThree:hover {
+      background-color: #0072b1;
+    }
+    
+    .containerFour:hover {
+      background-color: #128C7E;
+    }
+    
+    .socialContainer:active {
+      transform: scale(0.9);
+    }
+    
+    .socialSvg {
+      width: 12px;
+    }
+    
+    .socialSvg path {
+      fill: rgb(255, 255, 255);
+    }
+    
+    .socialContainer:hover .socialSvg {
+      animation: slide-in-top 0.3s both;
+    }
+    
+    @keyframes slide-in-top {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    /* ===== HERO SECTION ===== */
+    .hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 80px; 
+}
+
+    
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+    
+    .hero-text {
+      max-width: 800px;
+      color: white;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      margin-bottom: 2.5rem;
+      opacity: 0.9;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    /* Button Styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+      gap: 0.5rem;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-outline:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .btn-outline1 {
+      background-color: transparent;
+      color: #ffff;
+      border: 2px solid #ffffff;
+    }
+    
+    .btn-outline1:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+    /* Scroll Indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 50px;
+      z-index: 2;
+    }
+    
+    .scroll-indicator-inner {
+      width: 100%;
+      height: 100%;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 15px;
+      position: relative;
+    }
+    
+    .scroll-dot {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 6px;
+      background-color: white;
+      border-radius: 50%;
+      animation: scrollBounce 2s infinite;
+    }
+    
+    @keyframes scrollBounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      40% {
+        transform: translateX(-50%) translateY(10px);
+      }
+      60% {
+        transform: translateX(-50%) translateY(5px);
+      }
+    }
+    
+    /* ===== INTRODUCTION SECTION ===== */
+    .intro-section {
+      padding: 5rem 0;
+      background-color: #ffffff;
+    }
+    
+    /* ===== ROADMAP SECTION ===== */
+    .roadmap-section {
+      padding: 5rem 0;
+      background-color: white;
+    }
+    
+    .roadmap-header {
+      margin-bottom: 3rem;
+    }
+    
+    /* Progress Indicator */
+    .progress-indicator {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 4rem;
+      position: relative;
+    }
+    
+    .progress-step {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    
+    .step-number {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.25rem;
+      transition: var(--transition);
+      z-index: 2;
+    }
+    
+    .step-connector {
+      width: 100px;
+      height: 3px;
+      background-color: #ffffff;
+      margin: 0 10px;
+    }
+    
+    .progress-step.active .step-number {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    /* Roadmap Stages */
+    .roadmap-stages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .stage-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+    }
+    
+    .stage-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .stage-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      z-index: 2;
+      box-shadow: var(--shadow);
+    }
+    
+    .stage-image {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .stage-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .stage-card:hover .stage-image img {
+      transform: scale(1.05);
+    }
+    
+    .stage-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+    }
+    
+    .stage-content {
+      padding: 1.5rem;
+    }
+    
+    .stage-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stage-subtitle {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .stage-description {
+      margin-bottom: 1.5rem;
+      color: #64748b;
+    }
+    
+    .stage-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-weight: 600;
+      cursor: pointer;
+    }
+    
+    /* ===== FUN FACTS SECTION ===== */
+    .fun-facts-section {
+      padding: 5rem 0;
+      background-color: #ffffff;
+    }
+    
+    .section-header {
+      margin-bottom: 3rem;
+    }
+    
+    .fun-facts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .fun-fact-card {
+      background-color: white;
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    
+    .fun-fact-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .fun-fact-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+    
+    .fun-fact-card.discovery .fun-fact-icon {
+      background-color: rgba(212, 175, 55, 0.1);
+      color: var(--primary);
+    }
+    
+    .fun-fact-card.growth .fun-fact-icon {
+      background-color: rgba(245, 158, 11, 0.1);
+      color: var(--warning);
+    }
+    
+    .fun-fact-card.impact .fun-fact-icon {
+      background-color: rgba(16, 185, 129, 0.1);
+      color: var(--success);
+    }
+    
+    .fun-fact-content h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+    
+    .fun-fact-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.25rem 0.75rem;
+      background-color: var(--primary);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-bottom-left-radius: var(--radius);
+    }
+    /* Fun Facts Section */
+.fun-facts-section {
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.fun-facts-section .section-header {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.fun-facts-section .section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.fun-facts-section .section-description {
+  color: #000000;
+  font-size: 1.1rem;
+}
+
+/* Grid Layout */
+.fun-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+
+.fun-fact-card.card1 {
+  display: block;
+  position: relative;
+  max-width: 280px;
+  background-color: #f3f3f3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  border-radius: 8px;
+  padding: 28px 20px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.fun-fact-card.card1 h3 {
+  font-size: 18px;
+  margin: 12px 0 10px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.fun-fact-card.card1 p {
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.4;
+}
+
+.fun-fact-icon {
+  font-size: 32px;
+  color: #00838d;
+  margin-bottom: 10px;
+}
+
+/* Hover Effect */
+.fun-fact-card.card1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #00838d;
+  height: 32px;
+  width: 44px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.fun-fact-card.card1:hover:before {
+  transform: scale(21);
+}
+
+.fun-fact-card.card1:hover h3,
+.fun-fact-card.card1:hover p {
+  color: #000000;
+}
+    /* Pro Tip */
+    .pro-tip {
+      background-color: white;
+      border-left: 4px solid var(--warning);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    
+    .pro-tip-content h3 {
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+    
+    /* ===== IMPACT SUMMARY ===== */
+    .impact-summary {
+      padding: 5rem 0;
+      background-color: rgb(255, 255, 255) !important;
+    }
+    
+    .summary-card {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #000000 !important;
+      padding: 3rem;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    
+    .summary-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .summary-description {
+      font-size: 1.125rem;
+      margin-bottom: 2.5rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #000000 !important;
+      opacity: 0.9;
+    }
+    
+    .summary-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    /* ===== SERVICES SECTION ===== */
+    .services-section {
+      padding: 5rem 0;
+      background-color: #ffffff;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    .service-card {
+      width: 100%;
+      height: 280px;
+      padding: 20px;
+      color: rgb(0, 0, 0);
+      background: linear-gradient(#ffffff, #fafafa) padding-box,
+                  linear-gradient(145deg, transparent 35%, var(--primary), var(--primary-dark)) border-box;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transform-origin: right bottom;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    
+    .service-card .main-content {
+      flex: 1;
+    }
+    
+    .service-card .heading {
+      font-size: 22px;
+      margin: 20px 0 12px;
+      font-weight: 600;
+      color: var(--secondary);
+    }
+    
+    .service-card p {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #555;
+    }
+    
+    .service-card:hover {
+      rotate: 8deg;
+    }
+    
+    /* ===== INCUBATEES SECTION ===== */
+    .incubatees-section {
+      padding: 5rem 0;
+      background-color: white;
+    }
+    
+    .incubatees-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    .incubatee-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .incubatee-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .incubatee-card img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .incubatee-content {
+      padding: 1.5rem;
+    }
+    
+    .incubatee-content h3 {
+      margin-bottom: 0.5rem;
+      color: var(--secondary);
+    }
+    
+    .incubatee-content p {
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+    
+    .incubatee-content em {
+      font-style: italic;
+      color: #777;
+    }
+    
+    .read-more {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+    
+    .read-more:hover {
+      background: var(--primary-dark);
+    }
+    
+    /* ===== GAMIFIED ROADMAP SECTION ===== */
+    .gamified-roadmap {
+      background: #ffffff;
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .roadmap {
+      position: relative;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+    
+    .roadmap-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+ 
+    .marker {
+      width: 30px;
+      height: 30px;
+      background: var(--primary);
+      border-radius: 50%;
+      flex-shrink: 0;
+      position: relative;
+      animation: bounce 1s infinite alternate;
+    }
+    
+    .step-card {
+      background: #b89c02!important;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: slideIn 0.8s forwards;
+    }
+    
+    .step-card h3 {
+      color: #000000 !important;
+      margin-bottom: 1rem;
+    }
+    .step-card p {
+      color: #000000 !important;
+      margin-bottom: 1rem;
+    }
+    /* ===== APPLICATION SECTION ===== */
+    .application-section {
+      padding: 5rem 0;
+      background-color: white;
+    }
+    
+    .application-steps {
+      max-width: 800px;
+      margin: auto;
+    }
+    
+    .application-steps ol {
+      font-size: 1.1rem;
+      line-height: 2;
+      color: #333;
+      padding-left: 1.5rem;
+    }
+    
+    .application-steps li {
+      margin-bottom: 1rem;
+    }
+    
+    .application-button {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    
+    .application-button a {
+      padding: 0.8rem 2rem;
+      background: var(--primary);
+      color: rgb(0, 0, 0);
+      border-radius: 6px;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+    }
+    
+    .application-button a:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    /* From Uiverse.io by Prince4fff */ 
+.card p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666;
+}
+
+.card p.small {
+  font-size: 14px;
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #00838d;
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.card1 {
+  display: block;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #00838d;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card1:hover:before {
+  transform: scale(21);
+}
+
+.card1:hover p {
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card1:hover h3 {
+  transition: all 0.3s ease-out;
+  color: #fff;
+}
+
+.card2 {
+  display: block;
+  top: 0px;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  border: 1px solid #f2f8f9;
+}
+
+.card2:hover {
+  transition: all 0.2s ease-out;
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  top: -4px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.card2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #00838d;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(2);
+  transform-origin: 50% 50%;
+  transition: transform 0.15s ease-out;
+}
+
+.card2:hover:before {
+  transform: scale(2.15);
+}
+
+.card3 {
+  display: block;
+  top: 0px;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  overflow: hidden;
+  border: 1px solid #f2f8f9;
+}
+
+.card3 .go-corner {
+  opacity: 0.7;
+}
+
+.card3:hover {
+  border: 1px solid #00838d;
+  box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5);
+  z-index: 500;
+}
+
+.card3:hover p {
+  color: #00838d;
+}
+
+.card3:hover .go-corner {
+  transition: opactiy 0.3s linear;
+  opacity: 1;
+}
+
+.card4 {
+  display: block;
+  top: 0px;
+  position: relative;
+  max-width: 262px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.card4 .go-corner {
+  background-color: #00838d;
+  height: 100%;
+  width: 16px;
+  padding-right: 9px;
+  border-radius: 0;
+  transform: skew(6deg);
+  margin-right: -36px;
+  align-items: start;
+  background-image: linear-gradient(-45deg, #8f479a 1%, #dc2a74 100%);
+}
+
+.card4 .go-arrow {
+  transform: skew(-6deg);
+  margin-left: -2px;
+  margin-top: 9px;
+  opacity: 0;
+}
+
+.card4:hover {
+  border: 1px solid #cd3d73;
+}
+
+.card4 h3 {
+  margin-top: 8px;
+}
+
+.card4:hover .go-corner {
+  margin-right: -12px;
+}
+
+.card4:hover .go-arrow {
+  opacity: 1;
+}
+    /* ===== FOOTER ===== */
+    #footer {
+  position: relative;
+  overflow: hidden;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  background: linear-gradient(270deg, #d4af37, #ffea00, #d4af37);
+  background-size: 600% 600%;
+  animation: glowingBorder 8s linear infinite;
+  filter: blur(6px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+@keyframes glowingBorder {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+#footer {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  background: #0d0d0d; /* darker black background */
+  background-image:
+    linear-gradient(rgba(212,175,55,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,175,55,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moveGrid 60s linear infinite; /* slower grid animation */
+  color: #b8b8b8;
+  border-top: 1px solid rgba(212,175,55,0.1);
+  z-index: 10;
+}
+
+#footer::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  background: linear-gradient(270deg, rgb(212, 175, 55), rgba(255,234,0,0.1), rgba(212,175,55,0.3));
+  background-size: 600% 600%;
+  animation: glowingBorder 12s linear infinite;
+  filter: blur(4px);
+  opacity: 0.25;  /* much more subtle */
+  z-index: 0;
+}
+
+@keyframes glowingBorder {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes moveGrid {
+  0% {background-position: 0 0, 0 0;}
+  100% {background-position: 40px 40px, 40px 40px;}
+}
+
+.social-icons a:hover {
+  animation: pulseGlow 1.8s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5), 0 0 20px rgba(255, 234, 0, 0.3);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.4), 0 0 10px rgba(255, 234, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 0 30px rgba(255, 234, 0, 0.4);
+  }
+}
+
+.footer-content {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-logo img {
+  height: 60px; /* increased from 40px */
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  animation: pulse 3s ease-in-out infinite;
+  transition: filter 0.3s ease;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(0) invert(1);
+  }
+  50% {
+    transform: scale(1.08);
+    filter: brightness(0) invert(0.85);
+  }
+}
+
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #b8b8b8;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-links a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #d4af37;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.footer-links a:hover {
+  color: #d4af37;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #222222;
+  color: #d4af37;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+.social-icons a:hover {
+  background: #d4af37;
+  color: #121212;
+  box-shadow: 0 0 15px #d4af37;
+}
+
+.social-icons a svg {
+  width: 18px;
+  height: 18px;
+}
+
+copyright {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 25px;
+  color: #666666;
+  font-size: 13px;
+  user-select: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+}
+    /* ===== ANIMATIONS ===== */
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+    
+    @keyframes slideIn {
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 900px) {
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        flex-direction: column;
+        background: rgba(20, 20, 20, 0.95);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      
+      .nav-menu.active {
+        display: flex;
+      }
+      
+      .hamburger {
+        display: flex;
+      }
+      
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+      }
+      
+      .progress-indicator {
+        flex-direction: column;
+      }
+      
+      .step-connector {
+        width: 3px;
+        height: 50px;
+        margin: 10px 0;
+      }
+      
+      .roadmap-stages {
+        grid-template-columns: 1fr;
+      }
+      
+      .summary-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .roadmap-step {
+        flex-direction: column !important;
+        align-items: flex-start;
+      }
+      
+      .marker {
+        margin-bottom: 1rem;
+      }
+      
+      .step-card {
+        transform: translateY(50px);
+      }
+    }
+    
+    /* Expanded Stage View */
+    .stage-card.expanded .stage-description {
+      display: block;
+    }
+    
+    .stage-card:not(.expanded) .stage-description {
+      display: none;
+    }
+    
+    /* Animation delays for roadmap steps */
+    .roadmap-step:nth-child(1) .step-card {
+      animation-delay: 0.2s;
+    }
+    
+    .roadmap-step:nth-child(2) .step-card {
+      animation-delay: 0.4s;
+    }
+    
+    .roadmap-step:nth-child(3) .step-card {
+      animation-delay: 0.6s;
+    }
+    
+    .roadmap-step:nth-child(4) .step-card {
+      animation-delay: 0.8s;
+    }
+    
+    .roadmap-step:nth-child(5) .step-card {
+      animation-delay: 1s;
+    }
+  /* ===== GAMIFIED ROADMAP SECTION ===== */
+.gamified-roadmap {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.gamified-roadmap .section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #07173f;
+}
+
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+
+.roadmap-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.roadmap-step .marker {
+  width: 20px;
+  height: 20px;
+  background-color: #00838d;
+  border-radius: 50%;
+  margin-top: 10px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.roadmap-step:not(:last-child) .marker::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 4px;
+  height: calc(100% - 20px);
+  background-color: #00838d;
+  transform: translateX(-50%);
+}
+
+.step-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 600px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.step-card h3 {
+  font-size: 1.6rem;
+  color: #07173f;
+  margin-bottom: 12px;
+}
+
+.step-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ===== APPLICATION SECTION ===== */
+.application-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.application-section .section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #07173f;
+}
+
+.application-steps {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.application-steps ol {
+  counter-reset: step;
+  list-style: none;
+  padding-left: 0;
+}
+
+.application-steps li {
+  counter-increment: step;
+  margin-bottom: 25px;
+  padding-left: 50px;
+  position: relative;
+  font-size: 1rem;
+  color: #555;
+}
+
+.application-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #00838d;
+  color: #fff;
+  font-weight: 700;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.application-button {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.application-button a {
+  background-color: #00838d;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.application-button a:hover {
+  background-color: #006066;
+}
+
+/* ===== IMPACT SUMMARY ===== */
+.impact-summary {
+  padding: 80px 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.summary-card {
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px 50px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.summary-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #07173f;
+  margin-bottom: 20px;
+}
+
+.summary-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.summary-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.summary-buttons .btn {
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: #00838d;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #006066;
+}
+
+.btn-outline1 {
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid #006066 !important;
+}
+
+.btn-outline1:hover {
+  background-color: #00838d;
+  color: #fff;
+}
+
+  
+  /* ===== APPLICATION SECTION STYLES ===== */
+  .application-section {
+    padding: 5rem 0;
+    background-color: white;
+  }
+  
+  .application-steps {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #00838d;
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  
+  .application-button {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .application-button a {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--primary);
+    color: white;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: var(--transition);
+    text-decoration: none;
+  }
+  
+  .application-button a:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ===== IMPACT SUMMARY STYLES ===== */
+  .impact-summary {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  }
+  
+  .summary-card {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 4rem 3rem;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .summary-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .summary-description {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .summary-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .roadmap-step,
+    .roadmap-step:nth-child(even) {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .marker {
+      margin-bottom: 1.5rem;
+    }
+    
+    .step-card {
+      margin: 0;
+    }
+    
+    .roadmap::before {
+      left: 20px;
+    }
+    
+    .summary-card {
+      padding: 2.5rem 1.5rem;
+    }
+    
+    .summary-title {
+      font-size: 1.8rem;
+    }
+    
+    .summary-description {
+      font-size: 1.1rem;
+    }
+    
+    .summary-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+ 
+</head>
+<body>
+  <!-- Header -->
+  <header class="header-main">
+    <div class="logo">
+      <img src="images/MDiHub.png" alt="Mafikeng Innovation Hub Logo">
+    </div>
+    
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <!-- Navigation -->
+    <nav>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </li>
+        <li><a href="business-incubation.html">Business Incubation</a></li>
+        <li><a href="programs.html">Programmes</a></li>
+        <li><a href="skills.html">Skills Development</a></li>
+        <li class="dropdown">
+          <a href="#">Facilities</a>
+          <ul class="dropdown-menu">
+            <li><a href="NMM.html">CISCO Edge</a></li>
+            <li><a href="living-lab.html">Living Lab</a></li>
+            <li><a href="#">Learning Factory (Coming Soon)</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="gallery.html">Gallery</a>
+
+        </li>
+        <li><a href="blog.htmls">Media</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul> 
+    </nav>
+    
+    <!-- Social Media Icons -->
+    <div class="social-card">
+      <a href="#" class="socialContainer containerOne">
+        <svg class="socialSvg instagramSvg" viewBox="0 0 16 16"> 
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path> 
+        </svg>
+      </a>
+      
+      <a href="#" class="socialContainer containerTwo">
+        <svg class="socialSvg twitterSvg" viewBox="0 0 16 16"> 
+          <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path> 
+        </svg>
+      </a>
+      
+      <a href="#" class="socialContainer containerThree">
+        <svg class="socialSvg linkdinSvg" viewBox="0 0 448 512">
+          <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+        </svg>
+      </a>
+      
+      <a href="#" class="socialContainer containerFour">
+        <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16"> 
+          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.430.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path> 
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-background">
+      <img src="images/incubation.png" alt="Journey" class="hero-image">
+      <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">What is Incubation?</h1>
+        <p class="hero-subtitle">
+          Join our incumbents on their transformative journey from aspiring individuals 
+          with a vision to accomplished leaders making real impact.
+        </p>
+        
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="scrollToRoadmap()">
+            Start the Journey
+            <i data-lucide="arrow-right"></i>
+          </button>
+          <button class="btn btn-outline">
+            Learn About MDiHub
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-indicator-inner">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  
+    <style>
+  .roadmap-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.roadmap-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.roadmap-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.roadmap-header h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+.roadmap-header p {
+    font-size: 1.1rem;
+    color: #000000;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.roadmap-stages {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+
+/* Connecting line */
+.roadmap-stages:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    width: 4px;
+    background: linear-gradient(to bottom, #ffd700, #000000);
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.stage-card {
+    display: flex;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    margin-left: 80px;
+}
+
+.stage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.stage-image {
+    flex: 0 0 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stage-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.stage-card:hover .stage-image img {
+    transform: scale(1.05);
+}
+
+.stage-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(52, 152, 219, 0.7), rgba(46, 204, 113, 0.7));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.stage-card:hover .stage-image-overlay {
+    opacity: 1;
+}
+
+.stage-content {
+    padding: 30px;
+    flex: 1;
+}
+
+.stage-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.discovery .stage-title {
+    color: #000000;
+}
+
+.growth .stage-title {
+    color: #000000;
+}
+
+.impact .stage-title {
+    color: #000a04;
+}
+
+.stage-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.stage-description {
+    color: #000000;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.stage-toggle {
+    display: inline-flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #3498db;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background: rgba(52, 152, 219, 0.1);
+}
+
+.discovery .stage-toggle {
+    color: #3498db;
+    background: rgba(52, 152, 219, 0.1);
+}
+
+.growth .stage-toggle {
+    color: #f39c12;
+    background: rgba(243, 156, 18, 0.1);
+}
+
+.impact .stage-toggle {
+    color: #2ecc71;
+    background: rgba(46, 204, 113, 0.1);
+}
+
+.stage-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stage-toggle i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Stage markers */
+.stage-card:before {
+    content: attr(data-stage);
+    position: absolute;
+    left: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    z-index: 3;
+}
+
+.discovery:before {
+    background: #3498db;
+    box-shadow: 0 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+.growth:before {
+    background: #f39c12;
+    box-shadow: 0 0 0 8px rgba(243, 156, 18, 0.2);
+}
+
+.impact:before {
+    background: #2ecc71;
+    box-shadow: 0 0 0 8px rgba(46, 204, 113, 0.2);
+}
+
+/* Expanded state */
+.stage-card.expanded .stage-description {
+    display: block;
+}
+
+.stage-card.expanded .stage-toggle i {
+    transform: rotate(180deg);
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .stage-card {
+        flex-direction: column;
+        margin-left: 60px;
+    }
+    
+    .stage-image {
+        flex: 0 0 250px;
+    }
+    
+    .roadmap-stages:before {
+        left: 30px;
+    }
+    
+    .stage-card:before {
+        left: -50px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .roadmap-stages:before {
+        display: none;
+    }
+    
+    .stage-card {
+        margin-left: 0;
+    }
+    
+    .stage-card:before {
+        display: none;
+    }
+    
+    .roadmap-header h2 {
+        font-size: 2rem;
+    }
+}
+</style>
+
+<div class="roadmap-container">
+<div class="roadmap-header">
+    <h2>Entrepreneur Journey Roadmap</h2>
+    <p>Follow our participants' journey from idea to impact with MDiHub's comprehensive incubation program.</p>
+</div>
+ 
+<div class="roadmap-stages">
+    <!-- Stage 1: Discovery -->
+    <div class="stage-card discovery" data-stage="1">
+        <div class="stage-image">
+            <img src="images/discovery.jpg" alt="Discovery Stage">
+            <div class="stage-image-overlay"></div>
+        </div>
+        <div class="stage-content">
+            <h3 class="stage-title">Discovery</h3>
+            <p class="stage-subtitle">Participants discover MDiHub, a place where ideas take shape and mentorship lights the path.</p>
+            <p class="stage-description">
+                In this foundational stage, aspiring entrepreneurs discover the power of proper incubation. 
+                They connect with experienced mentors, explore market opportunities, and begin shaping their raw ideas 
+                into viable business concepts. The discovery phase is about exploration, learning, and building the foundation 
+                for future success.
+            </p>
+            
+            <button class="stage-toggle" onclick="toggleStageExpansion(this)">
+                Learn More <i data-lucide="chevron-down"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Stage 2: Growth -->
+    <div class="stage-card growth" data-stage="2">
+        <div class="stage-image">
+            <img src="images/1.jpg" alt="Growth Stage">
+            <div class="stage-image-overlay"></div>
+        </div>
+        <div class="stage-content">
+            <h3 class="stage-title">Growth</h3>
+            <p class="stage-subtitle">With access to skills development, market insights, and shared resources, participants begin building their prototypes.</p>
+            <p class="stage-description">
+                During the growth phase, entrepreneurs gain access to critical resources including skills development programs, 
+                market research, technical support, and shared workspace facilities. This is where ideas transform into 
+                tangible prototypes and minimum viable products. Participants learn essential business skills while building 
+                and testing their solutions.
+            </p>
+            
+            <button class="stage-toggle" onclick="toggleStageExpansion(this)">
+                Learn More <i data-lucide="chevron-down"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Stage 3: Impact -->
+    <div class="stage-card impact" data-stage="3">
+        <div class="stage-image">
+            <img src="images/impact.jpg" alt="Impact Stage">
+            <div class="stage-image-overlay"></div>
+        </div>
+        <div class="stage-content">
+            <h3 class="stage-title">Impact</h3>
+            <p class="stage-subtitle">Through guidance and advanced support, participants launch their solutions, creating impact locally and beyond.</p>
+<p class="stage-description">
+    The impact stage represents the culmination of the incubation journey. With refined products, validated 
+    business models, and strong support networks, entrepreneurs launch their solutions into the market. 
+    They create jobs, solve real problems, and generate positive impact in their communities while building 
+    sustainable, scalable businesses.
+</p>
+
+            <button class="stage-toggle" onclick="toggleStageExpansion(this)">
+                Learn More <i data-lucide="chevron-down"></i>
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+// Initialize Lucide icons
+lucide.createIcons();
+
+// Toggle stage expansion
+function toggleStageExpansion(button) {
+    const card = button.closest('.stage-card');
+    card.classList.toggle('expanded');
+    
+    // Update button text
+    if (card.classList.contains('expanded')) {
+        button.innerHTML = 'Show Less <i data-lucide="chevron-down"></i>';
+    } else {
+        button.innerHTML = 'Learn More <i data-lucide="chevron-down"></i>';
+    }
+    
+    // Refresh icons
+    lucide.createIcons();
+}
+</script>
+
+
+
+</div>
+<section class="fun-facts-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Did You Know?</h2>
+      <p class="section-description">
+        Fascinating facts about South African entrepreneurship, innovation, and intellectual property. These insights are inspired by the Mafikeng Digital Innovation Hub (MDIHUB) and its incubation programs, which foster startups and cultivate future innovators in the region.
+      </p>
+    </div>
+
+    <div class="fun-facts-grid">
+      <!-- Card 1 -->
+      <a class="fun-fact-card card1 discovery" href="#">
+        <div class="fun-fact-icon">
+          <i data-lucide="lightbulb"></i>
+        </div>
+        <div class="fun-fact-content">
+          <h3>Patents in South Africa</h3>
+          <p>The first recorded patent in South Africa was granted in 1859 for a new type of safety lamp. Today, IP protection through patents and trademarks is vital for local startups to scale globally.</p>
+        </div>
+        <div class="go-corner"><div class="go-arrow">→</div></div>
+      </a>
+
+      <!-- Card 2 -->
+      <a class="fun-fact-card card1 growth" href="#">
+        <div class="fun-fact-icon">
+          <i data-lucide="trending-up"></i>
+        </div>
+        <div class="fun-fact-content">
+          <h3>Incubation Success</h3>
+          <p>Startups that go through South African business incubators have a 75% survival rate compared to only 40% for others. Programs like those at MDIHub support early-stage ventures and help boost success rates.</p>
+        </div>
+        <div class="go-corner"><div class="go-arrow">→</div></div>
+      </a>
+
+      <!-- Card 3 -->
+      <a class="fun-fact-card card1 impact" href="#">
+        <div class="fun-fact-icon">
+          <i data-lucide="globe"></i>
+        </div>
+        <div class="fun-fact-content">
+          <h3>SA Innovation Hubs</h3>
+          <p>South Africa has over 60 tech hubs and accelerators, including Mafikeng Digital Innovation Hub, which are shaping the next generation of African innovators.</p>
+        </div>
+        <div class="go-corner"><div class="go-arrow">→</div></div>
+      </a>
+
+      <!-- Card 4 -->
+      <a class="fun-fact-card card1 discovery" href="#">
+        <div class="fun-fact-icon">
+          <i data-lucide="shield"></i>
+        </div>
+        <div class="fun-fact-content">
+          <h3>IP Value in SA</h3>
+          <p>Strong trademarks and copyrights in South Africa can significantly increase a company's valuation. Mafikeng Digital Innovation Hub (MDIHUB) works with partners such as NIMPO and WIPO to help startups navigate IP protection and maximize their brand value.</p>
+        </div>
+        <div class="go-corner"><div class="go-arrow">→</div></div>
+      </a>
+
+      <!-- Card 5 -->
+      <a class="fun-fact-card card1 growth" href="#">
+        <div class="fun-fact-icon">
+          <i data-lucide="users"></i>
+        </div>
+        <div class="fun-fact-content">
+          <h3>Mentorship in SA</h3>
+          <p>Entrepreneurs who join mentorship programs are 5 times more likely to grow their businesses successfully and secure funding locally. At MDIHUB, startups like Key Fertility and Veish Group have benefited from incubation and mentorship through partners such as CSIR, Telkom Future  Makers, gaining access to guidance, resources, and networks that help them scale.</p>
+        </div>
+        <div class="go-corner"><div class="go-arrow">→</div></div>
+      </a>
+
+      <!-- Card 6 -->
+      <a class="fun-fact-card card1 impact" href="#">
+        <div class="fun-fact-icon">
+          <i data-lucide="zap"></i>
+        </div>
+        <div class="fun-fact-content">
+          <h3>Tech Growth SA</h3>
+          <p>South Africa’s tech sector is booming! Startups incubated at MDIHUB, like Midi Media and Alpha Labs, are leveraging innovative solutions to scale quickly and compete both locally and internationally.</p>
+        </div>
+        <div class="go-corner"><div class="go-arrow">→</div></div>
+      </a>
+
+      <!-- Card 7 -->
+      <a class="fun-fact-card card1 discovery" href="#">
+        <div class="fun-fact-icon">
+          <i data-lucide="cpu"></i>
+        </div>
+        <div class="fun-fact-content">
+          <h3>Renewable Energy Innovation</h3>
+          <p>Startups like Mega G incubated at MDIHUB are developing renewable energy solutions, driving sustainable growth and innovation across South Africa.</p>
+        </div>
+        <div class="go-corner"><div class="go-arrow">→</div></div>
+      </a>
+
+      <!-- Card 8 -->
+      <a class="fun-fact-card card1 growth" href="#">
+        <div class="fun-fact-icon">
+          <i data-lucide="award"></i>
+        </div>
+        <div class="fun-fact-content">
+          <h3>Award-Winning SA Startups</h3>
+          <p>Incubatees from MDIHUB, like ManSalema and BluDynamix, have won local and international awards, gaining recognition and proving that South African innovation competes on the global stage.</p>
+        </div>
+        <div class="go-corner"><div class="go-arrow">→</div></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Gamified Roadmap Section -->
+  <section class="gamified-roadmap">
+    <div class="container">
+      <div class="section-title">Why Join Our Incubation?</div>
+      <div class="roadmap">
+        <!-- Step 1 -->
+        <div class="roadmap-step">
+          <div class="marker"></div>
+          <div class="step-card">
+            <h3>Step 1: The Dream</h3>
+            <p>Your idea is the spark that can light up the future. Imagine the possibilities and get ready to start your journey.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="roadmap-step" style="flex-direction: row-reverse;">
+          <div class="marker"></div>
+          <div class="step-card" style="transform: translateX(50px);">
+            <h3>Step 2: Facing Challenges</h3>
+            <p>Obstacles are part of the journey: lack of resources, knowledge gaps, or market uncertainty. But you won't face them alone.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="roadmap-step">
+          <div class="marker"></div>
+          <div class="step-card">
+            <h3>Step 3: Joining MDiHub</h3>
+            <p>Access mentorship, resources, shared services, and funding opportunities to accelerate your startup.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="roadmap-step" style="flex-direction: row-reverse;">
+          <div class="marker"></div>
+          <div class="step-card" style="transform: translateX(50px);">
+            <h3>Step 4: Growth & Impact</h3>
+            <p>Transform your idea into a product, reach customers, and create meaningful impact with support from MDiHub.</p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="roadmap-step">
+          <div class="marker"></div>
+          <div class="step-card">
+            <h3>Step 5: Take Action</h3>
+            <p>Apply today and join a community of innovators shaping the future. Let's build your dream together!</p>
+            <p style="margin-top:1rem; font-style:italic; color:#555; text-align:center; font-size:1.2rem;">
+              Learn How to apply below
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Section -->
+  <section class="application-section">
+    <div class="container">
+      <div class="section-title">How to Apply</div>
+      <div class="application-steps">
+        <!-- Application Section -->
+      <ol style="color: white;">
+        <li style="color: white;"><strong></strong> Fill out the online application form with your startup details.</li>
+        <li style="color: white;"><strong></strong> Submit your business plan, product concept, and any supporting documents.</li>
+        <li style="color: white;"><strong></strong> Attend an interview with our incubation team for evaluation.</li>
+        <li style="color: white;"><strong></strong> Selected startups will be invited to join the incubation program.</li>
+        <li style="color: white;"><strong></strong> Onboarding and access to mentorship, training, and resources begin.</li>
+      </ol>
+      <div class="application-button">
+        <a href="#" style="color: rgb(0, 0, 0);">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Impact Summary -->
+<section class="impact-summary" style="background-color: white !important;">
+  <div class="container">
+    <div class="summary-card">
+      <h2 class="summary-title">More Than Support — It's a Journey</h2>
+      <p class="summary-description">
+        At MDiHub, incubation is more than support — it's a journey. From pre-seed to seed stage, 
+        we guide innovators like Mpho step by step, helping them transform ideas into scalable 
+        businesses that change the world.
+      </p>
+      <div class="summary-buttons">
+        <button class="btn btn-primary">
+          Join MDiHub Today
+          <i data-lucide="arrow-right"></i>
+        </button>
+        <button class="btn btn-outline1" onclick="window.location.href='contact.html'">
+          Contact Our Team
+        </button>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-content">
+  
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="Brand Logo">
+      </div>
+  
+      <div class="footer-links">
+        <a href="#terms">Terms & Conditions</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#cookies">Cookies</a>
+      </div>
+  
+      <div id="address-map" style="flex: 1 1 320px; min-width: 280px; color: #b8b8b8; font-size: 14px;">
+        <h4 style="color: #d4af37; margin-bottom: 8px; font-weight: 600;">Our Location</h4>
+        <p style="margin: 0 0 12px 0;">2696 James Watt Cres, Mafikeng, Industrial Site</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.221753306938!2d25.85202851502347!3d-25.852098382365665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eb77249e672a6af%3A0x4d66819ac5a23e70!2s2697%20James%20Watt%20Cres%2C%20Mafikeng%2C%20Industrial%20Site!5e0!3m2!1sen!2sza!4v1691847970283!5m2!1sen!2sza"
+          width="100%" height="120" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+  
+  
+      </div>
+  
+      <div id="social-links" class="social-icons">
+        <!-- Social icons here -->
+      </div>
+  
+      <p class="copyright">
+        &copy; <span id="current-year"></span> Mafikeng Digital Innovation Hub. All Rights Reserved.
+      </p>
+  
+    </div>
+  </footer>
+  <!-- JavaScript -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+    
+    // Mobile menu toggle
+    document.getElementById('hamburger').addEventListener('click', function(){
+      document.getElementById('nav-menu').classList.toggle('active');
+    });
+    
+    // Header scroll behavior
+    let lastScroll = 0;
+    const header = document.querySelector('.header-main');
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > lastScroll && currentScroll > 50) {
+        // Scrolling down
+        header.style.top = '-100px';
+      } else {
+        // Scrolling up
+        header.style.top = '0';
+      }
+      
+      lastScroll = currentScroll;
+                                                                                  
+      updateProgressIndicator();
+    });
+    
+  
+    function scrollToRoadmap() {
+      document.getElementById('roadmap').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
+    
+    function toggleStageExpansion(button) {
+      const card = button.closest('.stage-card');
+      const isExpanded = card.classList.contains('expanded');
+      const icon = button.querySelector('i');
+      
+      if (isExpanded) {
+        card.classList.remove('expanded');
+        icon.setAttribute('data-lucide', 'chevron-down');
+      } else {
+        card.classList.add('expanded');
+        icon.setAttribute('data-lucide', 'chevron-up');
+      }
+      
+    
+      lucide.createIcons();
+    }
+    
+   
+    function updateProgressIndicator() {
+      const roadmapSection = document.getElementById('roadmap');
+      if (!roadmapSection) return;
+      
+      const progressSteps = document.querySelectorAll('.progress-step');
+      const sectionTop = roadmapSection.offsetTop;
+      const sectionHeight = roadmapSection.offsetHeight;
+      const scrollPosition = window.scrollY;
+      
+      // Calculate which stage should be active based on scroll position
+      if (scrollPosition >= sectionTop - 100) {
+        const scrollProgress = (scrollPosition - sectionTop + 100) / sectionHeight;
+        
+        if (scrollProgress < 0.3) {
+          setActiveStep(1);
+        } else if (scrollProgress < 0.6) {
+          setActiveStep(2);
+        } else {
+          setActiveStep(3);
+        }
+      }
+      
+      function setActiveStep(stepNumber) {
+        progressSteps.forEach(step => {
+          if (parseInt(step.dataset.stage) <= stepNumber) {
+            step.classList.add('active');
+          } else {
+            step.classList.remove('active');
+          }
+        });
+      }
+    }
+  </script>
+
+
+  
+</body>
+</html>
